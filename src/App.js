@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import Container from './components/Container/Container';
 import Error from './components/Error/Error';
 import Loading from './components/Loading/Loading';
 import StudentList from './components/StudentList/StudentList';
@@ -65,7 +66,9 @@ function App() {
           else if error, render <Error error={error} />
           else render <StudentList />
        */}
-      {renderContent()}
+      <Container center={Boolean(error || loading)}>
+        {renderContent()}
+      </Container>
     </div>
   );
 }
