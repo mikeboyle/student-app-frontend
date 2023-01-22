@@ -1,3 +1,104 @@
+# STEPS
+1. X Create empty <Container /> component John
+2. X Render <Container /> with children Samantha
+3. X Move existing positioning css from <StudentList /> and <Loading /> into <Container /> JuHao
+4. X Make sure <Loading /> and <Error /> are centered Antonio
+5. X Styling for <Error /> Ziqian
+
+# NOTES
+/**
+   * memory
+   *                              myArr
+   *                               |
+   * __ __ __ __ "hello" __ "bye" ["hello"]
+   *  
+   * 
+   * const myString = "hello"
+   * myString = "bye"
+   * 
+   * const myArr = [];
+   * myArr.push("hello") // OK
+   * myArr = ["yo", "bye", "pizza"] // ERROR
+   */
+
+     /**
+   * Block Element Modifer (BEM)
+   * 
+   * StudentCard__avatar--active
+   * StudentCard__info
+   * block__element--modifier
+   * block--modifier
+   * 
+   * .Container {
+   *    &--center {
+   *    }
+   * }
+   * 
+   * .Container {
+   *  // attrs
+   * }
+   * 
+   * .Container--center {
+   *  //attrs
+   * }
+   */
+
+# QUESTIONS 2023-01-22
+X Why is the container component necessary can't we just uses a regular component to make these css changes?
+
+X What’s the difference between the class names Container__center and Container–center? Is it related to scss?
+
+X Why did you use `Boolean()` with the or statement when passing the `center` prop to `Layout`?
+
+X What are the advantages and disadvantages of using an array of class names vs. appending to a string?
+
+X Where do we find and configure the components dev tool?
+
+X Can we pass arrays of class names to other components and modify them?
+
+X How could we incorporate sass in our layout components? 
+
+X How does the npm classnames library work? 
+
+Why is typescript considered a stronger typing system vs javascript?
+"TS is a superset of JS"
+Other stuff in TS == defining the types of your variables, arguments, and return types, and component props
+Typescript has to be compiled into Javascript
+
+TS => JS => Js that browsers understand => bundle into a single JS file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # TODOS 2023-01-15
 X Style the student list
 X Handle loading state
@@ -5,6 +106,8 @@ X Handle error state
 NEXT TIME
 Style error state
 Refactor with a layout component
+
+
 
 # QUESTIONS 2023-01-15
 X Why do we need React components to re-render?
