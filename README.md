@@ -1,3 +1,9 @@
+# GOALS
+1. X Filter list by input
+2. X Handle no results situation
+3. X Input styling and any other styling
+
+
 # STEPS
 1. X Create empty <Container /> component John
 2. X Render <Container /> with children Samantha
