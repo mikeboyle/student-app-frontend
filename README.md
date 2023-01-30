@@ -1,8 +1,27 @@
+# STEPS 2023-01-29
+1. X Add controlled input element with state ZANE
+2. X Filter data based on input VICTOR & SAMANTHA
+3. X Render “no results” KONG
+4. “No results” styling
+5. Input styling and other styling
+
+
+# QUESTIONS
+1. When you set the variable dataToDisplay to studentData is that a copy of the data so we don’t make any changes to our API?
+2. Is reassigning datattodisplay in our if statement making that varialble only locally scoped?
+3. The renderContent function, was it created so you can better read the code since its only handling one thing. Like how would it have been written otherwise?
+4. Why is it tricky for data to go from child to parent? What are some ways we can do this?
+5. If you type lots of characters into the search, it starts scrolling left and right - is it better to fix it by stopping the scrolling or limiting the number of characters you can search?
+6. What are other use cases for the event class?
+7. Do you have to wrap the input by a div for better organization or could you just wrap the JSX?
+8. How do you decide when to use modifier classes?
+9. Can you chain use inherent?
+10. How to make search bar fixed while scrolling the student list?
+
 # GOALS
 1. X Filter list by input
 2. X Handle no results situation
 3. X Input styling and any other styling
-
 
 # STEPS
 1. X Create empty <Container /> component John
