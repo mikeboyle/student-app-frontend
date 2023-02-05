@@ -1,6 +1,6 @@
 .StudentCard {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 100px 1fr 50px;
     gap: 10px;
     padding: 16px;
     border-bottom: 1px solid #eee;
@@ -9,7 +9,7 @@
 .StudentCard__avatar {
     display: grid;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
 
 .StudentCard__avatar img {
@@ -30,4 +30,13 @@
 
 .StudentCard__info li {
     list-style-type: none;
+}
+
+.StudentCard button {
+    border: none;
+    padding: 0;
+    background: none;
+    color: grey;
+    font-size: 25px;
+    height: 50px;
 }

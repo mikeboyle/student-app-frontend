@@ -1,8 +1,14 @@
+import { FaMinus, FaPlus } from 'react-icons/fa';
+
 import './StudentCard.css';
+import StudentGrades from '../StudentGrades/StudentGrades';
+import { useState } from 'react';
 
 const StudentCard = ({ student }) => {
   const { email, company, firstName, lastName, pic, grades, id, skill } =
     student;
+
+  const [showGrades, setShowGrades] = useState(false);
 
   // Converted the grades to numbers
   const numericGrades = grades.map((grade) => Number(grade));
@@ -34,7 +40,15 @@ const StudentCard = ({ student }) => {
           <li>Skill: {skill}</li>
           <li>Average: {average}%</li>
         </ul>
+        {showGrades && <StudentGrades grades={grades} />}
       </div>
+      <button
+        onClick={() => {
+          setShowGrades(!showGrades);
+        }}
+      >
+        {showGrades ? <FaMinus /> : <FaPlus />}
+      </button>
     </div>
   );
 };
