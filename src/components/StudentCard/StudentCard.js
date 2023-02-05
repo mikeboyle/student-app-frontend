@@ -1,6 +1,11 @@
+import { useState } from 'react';
+import { FaMinus, FaPlus } from 'react-icons/fa';
+
 import './StudentCard.css';
 
 const StudentCard = ({ student }) => {
+  const [expanded, setExpanded] = useState(false);
+
   const { email, company, firstName, lastName, pic, grades, id, skill } =
     student;
 
@@ -18,7 +23,9 @@ const StudentCard = ({ student }) => {
   // Divide total by number of grades and assign to a var
   const average = total / numericGrades.length;
 
-  console.log(`<StudentCard /> rendered name=${firstName}`);
+  console.log(
+    `<StudentCard /> rendered name=${firstName} expanded=${expanded}`
+  );
   return (
     <div className="StudentCard" key={id}>
       <div className="StudentCard__avatar">
@@ -34,6 +41,26 @@ const StudentCard = ({ student }) => {
           <li>Skill: {skill}</li>
           <li>Average: {average}%</li>
         </ul>
+        {expanded && (
+          <div className="StudentCard__grades">
+            <ul>
+              {grades.map((grade, index) => (
+                <li key={`${grade}-${index}`}>
+                  <span>Test {index + 1}</span> <span>{grade}%</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+      <div className="StudentCard__controls">
+        <button
+          onClick={() => {
+            setExpanded(!expanded);
+          }}
+        >
+          {expanded ? <FaMinus /> : <FaPlus />}
+        </button>
       </div>
     </div>
   );

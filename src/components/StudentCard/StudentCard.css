@@ -1,6 +1,6 @@
 .StudentCard {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 100px 5fr 1fr;
     gap: 10px;
     padding: 16px;
     border-bottom: 1px solid #eee;
@@ -9,7 +9,7 @@
 .StudentCard__avatar {
     display: grid;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .StudentCard__avatar img {
@@ -30,4 +30,20 @@
 
 .StudentCard__info li {
     list-style-type: none;
+}
+
+.StudentCard__grades span {
+    display: inline-block;
+    min-width: 64px;
+}
+
+.StudentCard__controls button {
+    background: none;
+    border: none;
+    padding: 0;
+    padding-top: 6px;
+    font-size: 24px;
+    color: #aaa;
+    cursor: pointer;
+
 }
