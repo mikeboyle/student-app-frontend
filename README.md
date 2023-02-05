@@ -1,3 +1,27 @@
+# 2023-02-05
+
+## STEPS
+show / hide
+X 1. create the expanded state KONG
+X 2. render the grades only if expanded is true; otherwise do not show KONGhttps://beta.reactjs.org/learn/sharing-state-between-components
+X 3. toggle the expanded state when the user clicks the button KALILAH
+
+button
+X 4. use a ternary or conditional to set the text in the <button> KALILAH
+X 5. the text you render should depend on the expanded state KALILAH
+X 6. use react icons for the button text CHRISTINA
+
+## QUESTIONS
+X 1. Referring to your code, why a parenthesis, and not a curly brace, after mapping through grades on line 45?
+X 2. How do we add padding and coloring to the buttons?
+3. How can we build a toggle that makes all the cards’ state change?
+4. What is VIM and how do we deal with it?
+5. How do we undo unwanted git commits?
+6. What git tag commands are commonly used in the workplace? `git log --oneline`, `git reset --soft`, `git diff --staged`, etc.
+
+## NOTES
+
+
 # STEPS 2023-01-29
 1. X Add controlled input element with state ZANE
 2. X Filter data based on input VICTOR & SAMANTHA
