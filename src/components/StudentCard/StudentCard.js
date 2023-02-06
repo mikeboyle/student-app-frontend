@@ -1,11 +1,8 @@
-import { useState } from 'react';
 import { FaMinus, FaPlus } from 'react-icons/fa';
 
 import './StudentCard.css';
 
-const StudentCard = ({ student }) => {
-  const [expanded, setExpanded] = useState(false);
-
+const StudentCard = ({ expanded, onClick, student }) => {
   const { email, company, firstName, lastName, pic, grades, id, skill } =
     student;
 
@@ -54,13 +51,7 @@ const StudentCard = ({ student }) => {
         )}
       </div>
       <div className="StudentCard__controls">
-        <button
-          onClick={() => {
-            setExpanded(!expanded);
-          }}
-        >
-          {expanded ? <FaMinus /> : <FaPlus />}
-        </button>
+        <button onClick={onClick}>{expanded ? <FaMinus /> : <FaPlus />}</button>
       </div>
     </div>
   );

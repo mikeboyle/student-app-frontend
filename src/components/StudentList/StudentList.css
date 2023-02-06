@@ -2,22 +2,46 @@
     height: inherit;
 }
 
+.StudentList__controls {
+    display: grid;
+    grid-template-columns: 1fr 100px 100px;
+    align-items: flex-end;
+    gap: 16px;
+    width: 95%;
+    padding-bottom: 8px;
+}
 
-.StudentList__input input {
+.StudentList__controls button {
+    height: 50%;
+    background: none;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.StudentList__controls button:active {
+    border-color: #777;
+}
+
+
+.StudentList__controls input {
     margin: 0 8px;
     padding: 16px 0 8px;
-    width: 95%;
+    
     outline: none;
     border: none;
     border-bottom: 1px solid #ccc;
 }
 
-.StudentList__input input:focus {
+.StudentList__controls input:focus {
     border-color: #777;
 }
 
-.StudentList__content--center {
+.StudentList__content {
     height: calc(100% - 41px);
+    overflow-y: scroll;
+}
+
+.StudentList__content--center {
     display: grid;
     justify-content: center;
     align-items: center;
