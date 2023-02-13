@@ -3,6 +3,9 @@
     height: 80vh;
     border-radius: 5px;
     background-color: #fff;
+}
+
+.Container--scroll {
     overflow-y: scroll;
 }
 

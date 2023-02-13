@@ -1,4 +1,8 @@
-# 2023-02-12
+# Lifting state up: preview
+## GOALS
+X 1. Fix the bug where we forget a card's expanded state
+2. Build Expand All / Collapse All buttons
+
 ## Steps to reproduce bug
 
 1. Expand Ingaberg's grades
@@ -8,26 +12,19 @@
 **Expected** Ingaberg's card is still expanded.
 **Actual** Ingaberg's card is collapsed.
 
+## Steps to lift state up
+X 1. Move state from child to parent and replace with props
+X 1a. If child has user interaction, pass handler as props from parent to child
+X 2. Refactor the data type of parent state.
+X 3. Refactor how the "state prop" is passed to child.
+
+# 2023-02-12
 // OK
 <StudentCard key={student.id} student={student} updateExpanded={() => {setExpanded(id)}} />
 <StudentCard key={student.id} student={student} updateExpanded={setExpanded} />
 
 // NOT OK -- don't invoke the function instead of passing it
 <StudentCard key={student.id} student={student} updateExpanded={setExpanded(id)} />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 2023-02-05
 
