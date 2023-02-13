@@ -18,18 +18,13 @@ X 1a. If child has user interaction, pass handler as props from parent to child
 X 2. Refactor the data type of parent state.
 X 3. Refactor how the "state prop" is passed to child.
 
+# 2023-02-12
+// OK
+<StudentCard key={student.id} student={student} updateExpanded={() => {setExpanded(id)}} />
+<StudentCard key={student.id} student={student} updateExpanded={setExpanded} />
 
-
-
-
-
-
-
-
-
-
-
-
+// NOT OK -- don't invoke the function instead of passing it
+<StudentCard key={student.id} student={student} updateExpanded={setExpanded(id)} />
 
 # 2023-02-05
 
