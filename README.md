@@ -1,3 +1,34 @@
+# 2023-02-12
+## Steps to reproduce bug
+
+1. Expand Ingaberg's grades
+2. Search for `cl`
+3. Ingaberg's card is removed from results
+4. Delete search term so that Ingaberg is shown in results.
+**Expected** Ingaberg's card is still expanded.
+**Actual** Ingaberg's card is collapsed.
+
+// OK
+<StudentCard key={student.id} student={student} updateExpanded={() => {setExpanded(id)}} />
+<StudentCard key={student.id} student={student} updateExpanded={setExpanded} />
+
+// NOT OK -- don't invoke the function instead of passing it
+<StudentCard key={student.id} student={student} updateExpanded={setExpanded(id)} />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 2023-02-05
 
 ## STEPS
